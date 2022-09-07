@@ -74,7 +74,7 @@ function getISSCoords(){
     const url = 'http://api.open-notify.org/iss-now.json'
 
 
-    fetch(url, {referrerPolicy: "unsafe_url" })
+    fetch(url, {referrerPolicy: "unsafe-url" })
     .then((resp) => resp.json())
     .then(function(data) {
         
@@ -128,7 +128,7 @@ function getCityName(latitude, longitude){
     const URL = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=pt`
     let locationData;
     
-    fetch(URL, {referrerPolicy: "unsafe_url" })
+    fetch(URL, {referrerPolicy: "unsafe-url" })
     .then((resp) => resp.json())
     .then(function(data) {
         
