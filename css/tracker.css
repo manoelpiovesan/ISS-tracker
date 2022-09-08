@@ -77,3 +77,34 @@ html,body{
     
 }
 
+
+@media(max-width: 600px){
+
+    .stats-value span{
+        font-size: 0.5rem;
+    }
+
+    .stats p{
+        font-size: 0.8rem;
+    }
+
+    .stats-value{
+        font-size: 0.9rem;
+    }
+    
+    
+    .stats p{
+        margin: 0;
+    }
+
+    .hud p{
+        margin: 0;
+        font-size: 0.8rem;
+    }
+
+    
+
+    .hud #locality{
+        font-size: 1rem;
+    }
+}
