@@ -43,7 +43,8 @@ var light = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/ligh
 var map = L.map('map', {
     center: [-22.285353906676182, -42.539959456883565],
     zoom: 10,
-    layers: [dark, cities]
+    layers: [dark, cities],
+    attributionControl: false
 });
 
 var baseLayers = {
