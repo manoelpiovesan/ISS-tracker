@@ -91,6 +91,21 @@ html,body{
     .stats-value{
         font-size: 0.9rem;
     }
+
+    #stats-right{
+        position: fixed;
+        color: white;
+        bottom: 13vh;
+        right: 5vw;
+        z-index: 9;
+    }
+    
+    #stats-left{
+        position: fixed;
+        color: white;
+        bottom: 13vh;
+        left: 5vw;
+        z-index: 9;
     
     
     .stats p{
