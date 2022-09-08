@@ -5,16 +5,7 @@
 // L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png	', {
 //     maxZoom: 19,
 // }).addTo(map);
-var issIcon = L.icon({
-    iconUrl: 'https://cdn.discordapp.com/attachments/978879748782563361/1017279167210999889/iconPurple.PNG',
-    shadowUrl: 'https://cdn.discordapp.com/attachments/978879748782563361/1017279167210999889/iconPurple.PNG',
 
-    iconSize:     [38, 38], // size of the icon
-    shadowSize:   [0, 0], // size of the shadow
-    iconAnchor:   [20, 20], // point of the icon which will correspond to marker's location
-    shadowAnchor: [4, 62],  // the same for the shadow
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-});
 
 var cities = L.layerGroup();
 
@@ -45,6 +36,17 @@ var map = L.map('map', {
     zoom: 10,
     layers: [dark, cities],
     attributionControl: false
+});
+
+var issIcon = L.icon({
+    iconUrl: 'https://cdn.discordapp.com/attachments/978879748782563361/1017279167210999889/iconPurple.PNG',
+    shadowUrl: 'https://cdn.discordapp.com/attachments/978879748782563361/1017279167210999889/iconPurple.PNG',
+
+    iconSize:     [38, 38], // size of the icon
+    shadowSize:   [0, 0], // size of the shadow
+    iconAnchor:   [20, 20], // point of the icon which will correspond to marker's location
+    shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
 
 var baseLayers = {

@@ -44,7 +44,6 @@ body{
 }
 
 .main-title{
-   
     border-radius: 2rem;
 }
 
@@ -52,7 +51,24 @@ body{
 
 .iss img{
     width: 100%;
+    transition: 0.5s;
+    animation: pulsing 10s 1s ease infinite;
 }
+
+
+
+@keyframes pulsing {
+    0% {
+      transform: scale(1)
+    }
+    50%{
+        transform: scale(1.2)
+    }
+    100% {
+        transform: scale(1)
+    }
+  }
+
 
 @media(max-width: 600px){
     h1{
