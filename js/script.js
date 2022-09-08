@@ -119,7 +119,7 @@ function getISSCoords(){
             radius: 150
         }).addTo(map);
 
-        //map.setView([latitude,longitude], map.getZoom());
+        map.setView([latitude,longitude], map.getZoom());
 
         var atualCoordenada = new L.LatLng(latitude, longitude);
        
