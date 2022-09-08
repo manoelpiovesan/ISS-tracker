@@ -149,9 +149,13 @@ function getCityName(latitude, longitude){
        
         locationData = data
         console.log(data)
-
-        if(url == URL2){document.querySelector('#locality').textContent = data.address.state}
+        
+        if(url == URL2){
+            document.querySelector('#locality').textContent = data.address.state + ', ' + data.address.country
+        }
         if(url == URL1){document.querySelector('#locality').textContent = data.city }
+
+        
         
         
        

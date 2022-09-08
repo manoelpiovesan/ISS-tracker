@@ -26,8 +26,8 @@ h1 small{
     
 }
 
-.navbar img{
-    margin-left: 1rem;
+.navbar{
+    padding-left: 1rem;
 }
 
 
@@ -52,4 +52,14 @@ body{
 
 .iss img{
     width: 100%;
+}
+
+@media(max-width: 600px){
+    h1{
+        font-weight: 800;
+        font-size: 3em;
+    }
+    p{
+        font-size: 0.8em;
+    }
 }
