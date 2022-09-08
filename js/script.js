@@ -5,16 +5,16 @@
 // L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png	', {
 //     maxZoom: 19,
 // }).addTo(map);
-// var greenIcon = L.icon({
-//     iconUrl: 'img/iss.png',
-//     shadowUrl: 'leaf-shadow.png',
+var issIcon = L.icon({
+    iconUrl: '../img/iconPurple.png',
+    shadowUrl: '../img/iss.png',
 
-//     iconSize:     [38, 95], // size of the icon
-//     shadowSize:   [50, 64], // size of the shadow
-//     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-//     shadowAnchor: [4, 62],  // the same for the shadow
-//     popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-// });
+    iconSize:     [38, 38], // size of the icon
+    shadowSize:   [0, 0], // size of the shadow
+    iconAnchor:   [20, 20], // point of the icon which will correspond to marker's location
+    shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
 
 var cities = L.layerGroup();
 
@@ -76,7 +76,7 @@ inverval_timer = setInterval(function() {
 function stop_timer() {
     clearInterval(inverval_timer); 
 }
-
+var issMarker = L.marker([0, 0], {icon: issIcon}).addTo(map)
 var ListaDeCoordenadas = []
 
 function getISSCoords(){
@@ -87,11 +87,26 @@ function getISSCoords(){
     .then((resp) => resp.json())
     .then(function(data) {
 
+
+
+
         document.querySelector('#speed').textContent = parseInt(data.velocity)
         document.querySelector('#altitude').textContent = data.altitude.toFixed(2)
 
         let latitude =  parseFloat(data.latitude)
         let longitude = parseFloat(data.longitude)
+
+        
+
+        
+        var newLatLng = new L.LatLng(latitude, longitude);
+        issMarker.setLatLng(newLatLng);
+        
+        
+        
+
+
+        // var issMarker = L.marker([latitude, longitude], {icon: issIcon}).addTo(map);
 
         getCityName(latitude,longitude)
 
@@ -104,7 +119,7 @@ function getISSCoords(){
             radius: 150
         }).addTo(map);
 
-        map.setView([latitude,longitude], map.getZoom());
+        //map.setView([latitude,longitude], map.getZoom());
 
         var atualCoordenada = new L.LatLng(latitude, longitude);
        
@@ -116,8 +131,6 @@ function getISSCoords(){
 
         ListaDeCoordenadas.push(atualCoordenada)
         
-        
-
         
         var firstpolyline = new L.Polyline(ListaDeCoordenadas, {
             color: '#BB86FC',
