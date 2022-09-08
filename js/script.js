@@ -6,8 +6,8 @@
 //     maxZoom: 19,
 // }).addTo(map);
 var issIcon = L.icon({
-    iconUrl: '../img/iconPurple.png',
-    shadowUrl: '../img/iss.png',
+    iconUrl: '../img/iconPurple.PNG',
+    shadowUrl: '',
 
     iconSize:     [38, 38], // size of the icon
     shadowSize:   [0, 0], // size of the shadow
