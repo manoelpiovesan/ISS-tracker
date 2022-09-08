@@ -6,8 +6,8 @@
 //     maxZoom: 19,
 // }).addTo(map);
 var issIcon = L.icon({
-    iconUrl: '../img/iconPurple.PNG',
-    shadowUrl: '',
+    iconUrl: 'https://cdn.discordapp.com/attachments/978879748782563361/1017279167210999889/iconPurple.PNG',
+    shadowUrl: 'https://cdn.discordapp.com/attachments/978879748782563361/1017279167210999889/iconPurple.PNG',
 
     iconSize:     [38, 38], // size of the icon
     shadowSize:   [0, 0], // size of the shadow
