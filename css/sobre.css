@@ -6,9 +6,6 @@ html,body{
     margin: 0;
     padding: 0;
     font-family: Inter, sans-serif;
-
-
-    
 }
 
 h1{
@@ -32,26 +29,31 @@ h1 small{
 
 
 body{
-    
     background-image: url('../img/fundo3.png');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: end;
+    width: 100%;
     
 }
+
 .container{
-    height: 90vh;
+    
+    width: 100vw;
     color: white;
-    
-    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(251,251,251,0) 35%, rgba(0,0,0,1) 100%);
-    
+    text-shadow: 2px 2px 2px black;
 }
 
 .main-title{
-   
     border-radius: 2rem;
 }
 
+@media(max-width: 600px){
+    h1{
+        font-weight: 800;
+        font-size: 3em;
+    }
+}
 
 
 .iss img{
