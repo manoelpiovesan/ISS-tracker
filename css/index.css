@@ -21,13 +21,7 @@ h1 small{
 }
 
 .navbar{
-    height: 10vh;
     background-color: transparent;
-    
-}
-
-.navbar{
-    padding-left: 1rem;
 }
 
 
@@ -78,5 +72,6 @@ body{
     p{
         font-size: 0.8em;
     }
+    
 }
 

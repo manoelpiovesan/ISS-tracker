@@ -18,23 +18,27 @@
     
     <div class="my-container">
         
-                        
+              <div id="lock">
+                <img src="img/lock.svg" alt="" id="lock-img">
+              </div>          
                 
               <div class="stats" id="stats-right">
                 <p>Velocidade</p>
-                <span><span class='stats-value' id="speed">0</span><span>km/h</span></span>
+                <span><span class='stats-value' id="speed"><div class="spinner-border text-light" role="status"> </div> </span><span>km/h</span></span>
               </div>
 
               
               <div class='stats' id="stats-left">
                 <p>Altitude</p>
-                <span><span class="stats-value" id="altitude">0</span><span>km</span></span>
+                <span><span class="stats-value" id="altitude"><div class="spinner-border text-light" role="status"></div> </span><span>km</span></span>
               </div>
               
             
                 <div class="hud">
                     <p>Neste momento em</p>
-                    <span id='locality'>Em meio ao oceâno</span>
+                    <span id='locality'>
+                      <div class="spinner-border text-light" role="status"></div> 
+                    </span>
                 </div>
   
            

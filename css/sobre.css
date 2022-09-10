@@ -18,14 +18,11 @@ h1 small{
 }
 
 .navbar{
-    height: 10vh;
+   
     background-color: transparent;
     
 }
 
-.navbar img{
-    margin-left: 1rem;
-}
 
 
 body{
@@ -38,7 +35,6 @@ body{
 }
 
 .container{
-    
     width: 100vw;
     color: white;
     text-shadow: 2px 2px 2px black;

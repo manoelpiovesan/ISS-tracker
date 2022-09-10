@@ -77,6 +77,18 @@ html,body{
     
 }
 
+#lock{
+    position: fixed;
+    top: 2.3vh;
+    right: 5vw;
+    z-index: 9;
+    
+}
+
+#lock img{
+    filter: invert(100%) sepia(2%) saturate(0%) hue-rotate(148deg) brightness(192%) contrast(105%);
+}
+
 
 @media(max-width: 600px){
 
@@ -121,5 +133,14 @@ html,body{
 
     .hud #locality{
         font-size: 1rem;
+    }
+
+
+    #lock{
+        position: fixed;
+        top: 2.3vh;
+        right: 20vw;
+        z-index: 9;
+        
     }
 }
