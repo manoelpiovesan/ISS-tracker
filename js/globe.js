@@ -46,7 +46,6 @@ var world = Globe()
     .arcAltitudeAutoScale(0.15)
 (document.getElementById('myGlobe'))
 // clouds
-// Auto-rotate
 
 
 
@@ -72,8 +71,28 @@ new THREE.TextureLoader().load(CLOUDS_IMG_URL, cloudsTexture => {
 
 
 // adding arcs
+document.querySelector('#toggle-day-night').addEventListener('click', ()=>{
+    toggleDayNightGlobe()
+})
 
+var day = false
+function toggleDayNightGlobe(){
 
+    day = !day
+
+    if(day){
+        world.globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+        document.querySelector('#day-night-icon').setAttribute('src', 'img/sun.svg')
+        
+    }else{
+       
+        world.globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
+        document.querySelector('#day-night-icon').setAttribute('src', 'img/moon.svg')
+    }
+
+    
+
+}
 
 
 function changeCoords(lat, lng){

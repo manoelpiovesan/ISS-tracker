@@ -40,6 +40,18 @@ html,body{
     font-size: 1rem;
 }
 
+#toggle-day-night{
+    position: fixed;
+    color: white;
+    top: 4vh;
+    left: 2vw;
+    z-index: 9;
+}
+
+#toggle-day-night img{
+    width: 2rem;
+    filter: invert(1);
+}
 
 
 #stats-right{
@@ -135,5 +147,16 @@ html,body{
         right: 20vw;
         z-index: 9;
         
+    }
+
+    #toggle-day-night{
+        position: fixed;
+        color: white;
+        top: 2vh;
+        left: 4vw;
+        z-index: 9;
+    }
+    #toggle-day-night img{
+        width: 1.5rem;
     }
 }
