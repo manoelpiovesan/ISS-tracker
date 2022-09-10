@@ -20,6 +20,17 @@ h1 small{
     font-weight: 500;
 }
 
+.beta{
+    background-color: yellow;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 0.2em;
+    padding: 0.1em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    color: black;
+}
+
 .navbar{
     background-color: transparent;
 }
