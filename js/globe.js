@@ -7,7 +7,7 @@ const urlISS = 'https://api.wheretheiss.at/v1/satellites/25544'
 var ListaDeCoordenadas = []
 // -------------------------------------------------------
 //config globo
-const markerSvg = `<img src='img/iconPurple.png' style='width: 2rem;'/>`;
+const markerSvg = `<img src='./img/iconPurple.png' style='width: 2rem;'/>`;
 
 var gData = [{
     lat: -22.2,
@@ -61,6 +61,8 @@ new THREE.TextureLoader().load(CLOUDS_IMG_URL, cloudsTexture => {
   );
   world.scene().add(clouds);
 
+    //   if(!day){world.scene().remove(clouds)}
+
   (function rotateClouds() {
     clouds.rotation.y += CLOUDS_ROTATION_SPEED * Math.PI / 180;
     requestAnimationFrame(rotateClouds);
@@ -83,6 +85,7 @@ function toggleDayNightGlobe(){
     if(day){
         world.globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
         document.querySelector('#day-night-icon').setAttribute('src', 'img/sun.svg')
+        
         
     }else{
        
