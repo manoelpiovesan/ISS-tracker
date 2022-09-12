@@ -6,8 +6,8 @@ const urlISS = 'https://api.wheretheiss.at/v1/satellites/25544'
 // variaveis globais (nao alterar)
 var ListaDeCoordenadas = []
 // -------------------------------------------------------
-//config globo
-const markerSvg = `<img src='./img/iconPurple.png' style='width: 2rem;'/>`;
+//config globos
+const markerSvg = `<img src='./img/iconPurple.svg' style='width: 2rem;'/>`;
 
 var gData = [{
     lat: -22.2,
@@ -98,13 +98,6 @@ function toggleDayNightGlobe(){
 }
 
 
-function changeCoords(lat, lng){
-    gData[0].lat = lat
-    gData[0].lng = lng
-
-    world.htmlElementsData(gData)
-}
-
 
 // fim config globo
 
@@ -165,10 +158,6 @@ function getISSCoords(){
 
         changeCoords(latitude,longitude)
 
-       
-        
-
-        
     })
     .catch(function(error) {
     console.log(error);
