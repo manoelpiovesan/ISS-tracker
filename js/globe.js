@@ -170,7 +170,7 @@ function getCityName(latitude, longitude){
         const URL2 = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`
 
         // A API que vai ser usada no momento
-        var url = URL1
+        var url = URL2
 
 
     let locationData;
