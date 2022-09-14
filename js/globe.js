@@ -7,7 +7,7 @@ const urlISS = 'https://api.wheretheiss.at/v1/satellites/25544'
 var ListaDeCoordenadas = []
 // -------------------------------------------------------
 //config globos
-const markerSvg = `<img src='./img/iconPurple.svg' style='width: 2rem;'/>`;
+const markerSvg = `<img src='./img/iconPurple.png' style='width: 2rem;'/>`;
 
 var gData = [{
     lat: -22.2,
@@ -85,15 +85,11 @@ function toggleDayNightGlobe(){
     if(day){
         world.globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
         document.querySelector('#day-night-icon').setAttribute('src', 'img/sun.svg')
-        
-        
+
     }else{
-       
         world.globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
         document.querySelector('#day-night-icon').setAttribute('src', 'img/moon.svg')
     }
-
-    
 
 }
 
@@ -108,10 +104,7 @@ inverval_timer = setInterval(function() {
     getISSCoords()
 }, 4000);
 
-
-
 var firstPoint = true
-
 
 function getISSCoords(){
 
@@ -120,10 +113,6 @@ function getISSCoords(){
     fetch(urlISS)
     .then((resp) => resp.json())
     .then(function(data) {
-
-
-       
-
 
 
         // enviando velocidade e altitude p interface
@@ -151,17 +140,23 @@ function getISSCoords(){
         world.arcsData(arcsData)
 
         // atualizando localizacao do icone da ISS
-       
+       changeCoords(latitude, longitude)
         
         // resgatando local das coordenadas
         getCityName(latitude,longitude)
 
-        changeCoords(latitude,longitude)
+        
 
     })
     .catch(function(error) {
     console.log(error);
     });
+}
+
+function changeCoords(lat, lng){
+    gData[0].lat = lat
+    gData[0].lng = lng
+    world.htmlElementsData(gData)
 }
 
 function getCityName(latitude, longitude){
@@ -175,7 +170,7 @@ function getCityName(latitude, longitude){
         const URL2 = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`
 
         // A API que vai ser usada no momento
-        var url = URL2
+        var url = URL1
 
 
     let locationData;

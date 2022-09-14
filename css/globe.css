@@ -6,7 +6,6 @@ html,body{
     margin: 0;
     padding: 0;
 
-    
     font-family: Inter, sans-serif;
 }
 
@@ -16,8 +15,6 @@ html,body{
     width: 100vw;
     height: 100vh;
 }
-
-
 
 .hud{
     position: fixed;
@@ -87,10 +84,7 @@ html,body{
 
 
 .my-container{
-    position: relative;
-  
-   
-    
+    position: relative; 
 }
 
 
@@ -133,8 +127,6 @@ html,body{
         margin: 0;
         font-size: 0.8rem;
     }
-
-    
 
     .hud #locality{
         font-size: 1rem;
